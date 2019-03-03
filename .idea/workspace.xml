@@ -2,9 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9250e22d-e82e-4075-a443-61fcd89657d5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/submission.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/scala-2.11/reactive-actorbintree_2.11-0.1.0-SNAPSHOT-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/scala-2.11/reactive-actorbintree_2.11-0.1.0-SNAPSHOT.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/scala-2.11/submission.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/mainClass/$global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/inputs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/packageBin/$global/streams/output" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/packageSourcesOnly/$global/streams/inputs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/packageSourcesOnly/$global/streams/out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/streams/compile/packageSourcesOnly/$global/streams/output" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/copy-resources" beforeDir="false" afterPath="$PROJECT_DIR$/project/target/streams/compile/copyResources/$global/streams/copy-resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/actorbintree/BinaryTreeSet.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/actorbintree/BinaryTreeSet.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/actorbintree/BinaryTreeSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/actorbintree/BinaryTreeSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$$anonfun$2$$anonfun$applyOrElse$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$$anonfun$2$$anonfun$applyOrElse$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$$anonfun$2$$anonfun$applyOrElse$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$$anonfun$2$$anonfun$applyOrElse$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$$anonfun$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$$anonfun$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$$anonfun$copying$1$$anonfun$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$$anonfun$copying$1$$anonfun$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$$anonfun$copying$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$$anonfun$copying$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$CopyFinished$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$CopyFinished$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$CopyTo$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$CopyTo$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$CopyTo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$CopyTo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$Left$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$Left$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$Right$.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode$Right$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeSet$$anonfun$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeSet$$anonfun$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeSet$$anonfun$garbageCollecting$1$$anonfun$applyOrElse$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeSet$$anonfun$garbageCollecting$1$$anonfun$applyOrElse$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeSet$$anonfun$garbageCollecting$1$$anonfun$applyOrElse$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeSet$$anonfun$garbageCollecting$1$$anonfun$applyOrElse$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeSet$$anonfun$garbageCollecting$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeSet$$anonfun$garbageCollecting$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/scala-2.11/classes/actorbintree/BinaryTreeSet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.11.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncSetup/$global/streams/inc_compile_2.11.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/compile/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/compileIncSetup/$global/streams/inc_compile_2.11.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/compileIncSetup/$global/streams/inc_compile_2.11.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/compileIncremental/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/compileIncremental/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/definedTests/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/test/$global/streams/succeeded_tests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=actorbintree.BinaryTreeSuite/test/out" beforeDir="false" afterPath="$PROJECT_DIR$/target/streams/test/test/isModule=false name=actorbintree.BinaryTreeSuite/test/out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-reports/actorbintree.BinaryTreeSuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-reports/actorbintree.BinaryTreeSuite.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -20,13 +59,47 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="reactive-actorbintree" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="reactive-actorbintree" type="f1a62948:ProjectNode" />
+                <item name="reactive-actorbintree" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="reactive-actorbintree" type="f1a62948:ProjectNode" />
+                <item name="reactive-actorbintree" type="2d1252cf:ModuleNode" />
+                <item name="sbt commands" type="5c424813:SbtViewContributor$SbtCommandsGroupNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="reactive-actorbintree" type="f1a62948:ProjectNode" />
+                <item name="reactive-actorbintree" type="2d1252cf:ModuleNode" />
+                <item name="sbt tasks" type="d9357504:SbtViewContributor$SbtTasksGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/actorbintree/BinaryTreeSet.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+            <state relative-caret-position="157">
+              <caret line="139" selection-start-line="139" selection-end-line="139" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#1616#1638#0" expanded="true" />
@@ -36,11 +109,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.5.16/akka-actor_2.11-2.5.16-sources.jar!/akka/actor/ActorCell.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="738">
-              <caret line="114" column="4" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
+              <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -49,16 +131,16 @@
         <entry file="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.5.16/akka-actor_2.11-2.5.16-sources.jar!/akka/actor/Props.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1026">
-              <caret line="100" column="6" lean-forward="true" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+              <caret line="100" column="6" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/scala/actorbintree/BinaryTreeSuite.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+            <state relative-caret-position="299">
+              <caret line="191" column="34" selection-start-line="191" selection-start-column="34" selection-end-line="191" selection-end-column="34" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#97#147#0" expanded="true" />
@@ -78,14 +160,21 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>println</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/actorbintree/BinaryTreeSet.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/actorbintree/BinaryTreeSuite.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/actorbintree/BinaryTreeSet.scala" />
+        <option value="$PROJECT_DIR$/.ignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -108,53 +197,6 @@
               <item name="actorbintree" type="b2602c69:ProjectViewProjectNode" />
               <item name="actorbintree" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="actorbintree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="actorbintree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="actorbintree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="actorbintree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="actorbintree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="actorbintree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="actorbintree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="actorbintree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="actorbintree" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="actorbintree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="actorbintree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="actorbintree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="actorbintree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="actorbintree" type="b2602c69:ProjectViewProjectNode" />
-              <item name="actorbintree" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="actorbintree" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -163,7 +205,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551641619423" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551642514828" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -338,12 +380,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BinaryTreeSuite_Insert - 2019.03.03 at 18h 57m 49s.xml">
-      <configuration name="BinaryTreeSuite.Insert" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="BinaryTreeSuite_Insert - 2019.03.03 at 19h 02m 39s.xml">
-      <configuration name="BinaryTreeSuite.Insert" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
     <history-entry file="BinaryTreeSuite_Insert - 2019.03.03 at 19h 12m 33s.xml">
       <configuration name="BinaryTreeSuite.Insert" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
@@ -368,6 +404,12 @@
     <history-entry file="BinaryTreeSuite_behave_identically_to_built-in_set_with_inserts_only - 2019.03.03 at 19h 33m 44s.xml">
       <configuration name="BinaryTreeSuite.behave identically to built-in set with inserts only" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
+    <history-entry file="BinaryTreeSuite - 2019.03.03 at 19h 34m 42s.xml">
+      <configuration name="BinaryTreeSuite" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="BinaryTreeSuite - 2019.03.03 at 19h 39m 03s.xml">
+      <configuration name="BinaryTreeSuite" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -390,15 +432,15 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45070422" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45070422" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="sbt-shell-toolwindow" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="11" weight="0.32286024" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
@@ -411,7 +453,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="sbt" order="9" />
+      <window_info anchor="right" id="sbt" order="9" visible="true" weight="0.32995737" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -456,21 +498,32 @@
     <entry file="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.5.16/akka-actor_2.11-2.5.16-sources.jar!/akka/actor/Props.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
-          <caret line="100" column="6" lean-forward="true" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+          <caret line="100" column="6" selection-start-line="100" selection-start-column="6" selection-end-line="100" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/actorbintree/BinaryTreeSuite.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="191" column="34" selection-start-line="191" selection-start-column="34" selection-end-line="191" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#97#147#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.5.16/akka-actor_2.11-2.5.16-sources.jar!/akka/actor/ActorCell.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="738">
-          <caret line="114" column="4" lean-forward="true" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
+          <caret line="114" column="4" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/actorbintree/BinaryTreeSet.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+        <state relative-caret-position="157">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#1616#1638#0" expanded="true" />
@@ -479,14 +532,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/actorbintree/BinaryTreeSuite.scala">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#97#147#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="36">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
