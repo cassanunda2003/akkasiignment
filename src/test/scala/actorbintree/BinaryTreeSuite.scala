@@ -54,13 +54,36 @@ class BinaryTreeSuite(_system: ActorSystem) extends TestKit(_system) with FunSui
     val topNode = system.actorOf(Props[BinaryTreeSet])
 
     topNode ! Insert(testActor, id = 2, 1)
+    topNode ! Insert(testActor, id = 3, 2)
+    topNode ! Insert(testActor, id = 4, 3)
+    topNode ! Insert(testActor, id = 5, 4)
+    topNode ! Insert(testActor, id = 6, 5)
+
+
+
+    expectMsg(OperationFinished(2))
+    expectMsg(OperationFinished(3))
+    expectMsg(OperationFinished(4))
+    expectMsg(OperationFinished(5))
+    expectMsg(OperationFinished(6))
 
     topNode ! Contains(testActor, 10, 1)
     topNode ! Contains(testActor, 20, 3)
-
-    expectMsg(OperationFinished(2))
     expectMsg(ContainsResult(10, true))
-    expectMsg(ContainsResult(20, false))
+    expectMsg(ContainsResult(20, true))
+
+    topNode ! Remove(testActor, 50, 5)
+    expectMsg(OperationFinished(50))
+
+    topNode ! Contains(testActor, 60, 5)
+    expectMsg(ContainsResult(60, false))
+
+    topNode ! GC
+
+    topNode ! Contains(testActor, 10, 1)
+    topNode ! Contains(testActor, 20, 3)
+    expectMsg(ContainsResult(10, true))
+    expectMsg(ContainsResult(20, true))
   }
   //Testing
 
@@ -103,6 +126,7 @@ class BinaryTreeSuite(_system: ActorSystem) extends TestKit(_system) with FunSui
   }
 
   test("behave identically to built-in set (includes GC)") {
+
     val rnd = new Random()
     def randomOperations(requester: ActorRef, count: Int): Seq[Operation] = {
       def randomElement: Int = rnd.nextInt(100)
@@ -134,15 +158,60 @@ class BinaryTreeSuite(_system: ActorSystem) extends TestKit(_system) with FunSui
 
     val requester = TestProbe()
     val topNode = system.actorOf(Props[BinaryTreeSet])
-    val count = 1000
+    val count = 100
 
     val ops = randomOperations(requester.ref, count)
     val expectedReplies = referenceReplies(ops)
 
     ops foreach { op =>
       topNode ! op
-      if (rnd.nextDouble() < 0.1) topNode ! GC
+      //if (rnd.nextDouble() < 0.1) topNode ! GC
     }
     receiveN(requester, ops, expectedReplies)
   }
+//  test("behave identically to built-in set with inserts only") {
+//
+//    val rnd = new Random()
+//    def randomOperations(requester: ActorRef, count: Int): Seq[Operation] = {
+//      def randomElement: Int = rnd.nextInt(100)
+//      def randomOperation(requester: ActorRef, id: Int): Operation = rnd.nextInt(4) match {
+//                case 0 => Insert(requester, id, randomElement)
+//                case 1 => Insert(requester, id, randomElement)
+//                case 2 => Contains(requester, id, randomElement)
+//                case 3 => Remove(requester, id, randomElement)
+//              }
+//
+//      for (seq <- 0 until count) yield randomOperation(requester, seq)
+//    }
+//
+//    def referenceReplies(operations: Seq[Operation]): Seq[OperationReply] = {
+//      var referenceSet = Set.empty[Int]
+//      def replyFor(op: Operation): OperationReply = op match {
+//        case Insert(_, seq, elem) =>
+//          referenceSet = referenceSet + elem
+//          OperationFinished(seq)
+//        case Remove(_, seq, elem) =>
+//          referenceSet = referenceSet - elem
+//          OperationFinished(seq)
+//        case Contains(_, seq, elem) =>
+//          ContainsResult(seq, referenceSet(elem))
+//      }
+//
+//      for (op <- operations) yield replyFor(op)
+//    }
+//
+//    val requester = TestProbe()
+//    val topNode = system.actorOf(Props[BinaryTreeSet])
+//    val count = 1000
+//
+//    val ops = randomOperations(requester.ref, count)
+//    val expectedReplies = referenceReplies(ops)
+//    println(expectedReplies.toString())
+//    println(ops.toString())
+//    ops foreach { op =>
+//      topNode ! op
+//      if (rnd.nextDouble() < 0.1) topNode ! GC
+//    }
+//    receiveN(requester, ops, expectedReplies)
+//  }
 }

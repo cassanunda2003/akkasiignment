@@ -57,21 +57,37 @@ class BinaryTreeSet extends Actor {
   import BinaryTreeSet._
   import BinaryTreeNode._
 
+
   /** Accepts `Operation` and `GC` messages. */
   //val normal: Receive = { case _ => ??? }
   val normal: Receive = {
     case Insert(ac, id, elem) => root ! Insert(ac, id, elem)
     case Remove(actor, id, elem) => root ! Remove(actor, id, elem)
-    case Contains(actor, id, elem) => root ! Contains(actor, id, elem)
+    case Contains(actor, id, elem) => {
+      println("Set Rceiving contains")
+      root ! Contains(actor, id, elem)
+    }
     case OperationFinished(id) => sender ! OperationFinished(id)
-    case GC => ???
+    case GC => {
+      println("Garbage Collecting")
+      val newroot = createRoot
+      context.become(garbageCollecting(newroot))
+      root ! CopyTo(newroot)
+    }
+
   }
+
   var root = createRoot
 
   // optional
   var pendingQueue = Queue.empty[Operation]
 
-  def createRoot: ActorRef = context.actorOf(BinaryTreeNode.props(0, initiallyRemoved = true))
+  def createRoot: ActorRef = {
+
+   val r = context.actorOf(BinaryTreeNode.props(0, initiallyRemoved = true))
+    println("The root is " + r.hashCode())
+    r
+  }
 
   // optional
 
@@ -84,7 +100,18 @@ class BinaryTreeSet extends Actor {
     * `newRoot` is the root of the new binary tree where we want to copy
     * all non-removed elements into.
     */
-  def garbageCollecting(newRoot: ActorRef): Receive = ???
+  def garbageCollecting(newroot: ActorRef): Receive = {
+    case CopyFinished =>
+      println("****************ROOT RECEIVING COPY FINISH")
+      root = newroot
+      context.become(receive)
+      for (operation: Operation <- pendingQueue)
+        root ! operation
+    case operation: Operation =>{
+      pendingQueue = pendingQueue.enqueue(operation)
+      //log.info("{} receive Operation {} in GCollecting Mode. Queue Size:{}", self, operation.id, pendingQueue.size)
+    }
+  }
 
 }
 
@@ -117,18 +144,18 @@ class BinaryTreeNode(val elem: Int, initiallyRemoved: Boolean) extends Actor {
 
   val normal: Receive = {
     case Insert(actor, id, elem) => {
-      println("***************this" + this.elem + "****")
-      println("***************elem" + elem + "n****")
-
+      //println("Inserting value: " + elem + " id: " + id)
       elem match {
-        case element if element == this.elem => actor ! OperationFinished(id)
+        case element if element == this.elem =>
+          this.removed = false
+          actor ! OperationFinished(id)
         case element if element < this.elem => {
           if (subtrees.contains(Left))
             subtrees.get(Left).get ! Insert(actor, id, elem)
           else {
             val left = context.actorOf(BinaryTreeNode.props(elem, false))
-            println("\n**************Inserting************LEFT " + left.path + "\n")
             subtrees = subtrees + (Left -> left)
+            println("Inserted id: " + id + " element:" + elem)
             actor ! OperationFinished(id)
           }
         }
@@ -138,68 +165,79 @@ class BinaryTreeNode(val elem: Int, initiallyRemoved: Boolean) extends Actor {
           }
           else {
             val right = context.actorOf(BinaryTreeNode.props(elem, false))
-            println("\n**************Inserting************" + right.path + "\n")
             subtrees = subtrees + (Right -> right)
+            println("Inserted id: " + id + " element:" + elem)
             actor ! OperationFinished(id)
           }
         }
       }
     }
     case Contains(actor, id, elem) => {
-      println("***************" + this.elem + "****")
-      println("***************" + elem + "****")
-      println("***************" + this.self + "****")
-      println("***************" + subtrees.toString + "****")
+        println("looking up result: " + elem + " id: " + id)
         elem match {
           case element if element == this.elem => {
-            if(!removed)
-              actor ! ContainsResult(id, true)
-            else
-              actor ! ContainsResult(id, false)
+              if(this.removed)
+                actor ! ContainsResult(id, false)
+              else
+                actor ! ContainsResult(id, true)
           }
           case element if element < this.elem => {
-            println("Going left")
             if (subtrees.contains(Left))
               subtrees.get(Left).get ! Contains(actor, id, elem)
-            else
+            else {
+              println("Not found id: " + id + " element: " + elem)
               actor ! ContainsResult(id, false)
+            }
           }
           case element if element > this.elem => {
-            println("Going right")
             if (subtrees.contains(Right))
               subtrees.get(Right).get ! Contains(actor, id, elem)
-            else
+            else {
+              println("Not found id: " + id + " element: " + elem)
               actor ! ContainsResult(id, false)
+            }
           }
         }
     }
     case Remove(actor, id, elem) => {
-      println("***************" + this.elem + "****")
-      println("***************" + elem + "****")
-      println("***************" + this.self + "****")
-      println("***************" + subtrees.toString + "****")
+//      println("Removing element " + elem + " My current element is " + this.elem + " and my remove value is currently " + this.removed +
+//        " Contains left is " + subtrees.contains(Left) + " and Contains Right is " + subtrees.contains(Right) + "the id is " + id)
       elem match {
-        case elem if elem == this.elem => {
+        case element if element == this.elem => {
           this.removed = true
+          println("Removed element: " + elem + " id" + id)
           actor ! OperationFinished(id)
         }
-        case elem if elem < this.elem => {
-          println("Going left")
+        case element if element < this.elem => {
           if (subtrees.contains(Left))
             subtrees.get(Left).get ! Remove(actor, id, elem)
-          else
-            OperationFinished(id)
+          else {
+            println("Removed not found returning element: " + elem + " id" + id)
+            actor ! OperationFinished(id)
+          }
         }
         case _ => {
-          println("Going right")
           if (subtrees.contains(Right))
             subtrees.get(Right).get ! Remove(actor, id, elem)
-          else
+          else {
+            println("Removed not found returning element: " + elem + " id" + id)
             actor ! OperationFinished(id)
+          }
         }
       }
     }
-  }
+    case CopyTo(treeNode) => {
+      println("Copy to started")
+      context.become(copying(sender, subtrees.values.toSet, removed))
+      for(actor: ActorRef <- subtrees.values.toSet) {
+        actor ! CopyTo(treeNode)
+      }
+      if(!removed)
+        treeNode ! Insert(self, this.hashCode,this.elem)
+      if(subtrees.isEmpty)
+        sender ! CopyFinished
+    }
+}
 
 
   // optional
@@ -212,7 +250,29 @@ class BinaryTreeNode(val elem: Int, initiallyRemoved: Boolean) extends Actor {
   /** `expected` is the set of ActorRefs whose replies we are waiting for,
     * `insertConfirmed` tracks whether the copy of this node to the new tree has been confirmed.
     */
-  def copying(expected: Set[ActorRef], insertConfirmed: Boolean): Receive = ???
+  def copying(sentby: ActorRef, expected: Set[ActorRef], insertConfirmed: Boolean): Receive = {
+    case OperationFinished(_) => {
+      context.become(copying(sentby, expected, true))
+      println("Set is" + expected + " insertConfirmed is: " + insertConfirmed)
+        if(expected.isEmpty) {
+          sentby ! CopyFinished
+          context.stop(self)
+      }
+    }
+    case CopyFinished => {
+      println("Terminate received")
+      val newSet = expected.filter((x) => x != sender)
+      println("OLD SET IS " + expected + " New set is " + newSet)
+      if(newSet.isEmpty && insertConfirmed){
+        println("MY element is " + this.elem)
+        println("Sending copy finished to " + sentby)
+        sentby ! CopyFinished
+        context.stop(self)
+      }else {
+        context.become(copying(sentby, newSet,insertConfirmed))
+    }
+    }
+  }
 
 
 }
